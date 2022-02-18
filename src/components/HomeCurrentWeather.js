@@ -12,10 +12,11 @@ export default function CurrentWeather(props) {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          maxWidth: 280,
+          maxWidth: 400,
           maxHeight: 200,
           width: '100%',
           boxShadow: 0,
+          backgroundColor: 'transparent',
         }}
       >
         <CardMedia
@@ -34,8 +35,10 @@ export default function CurrentWeather(props) {
             align='center'
             variant='h4'
             color='text.secondary'
+            text-align='left'
           >
-            {props.cityWeatherToDisplay.Temperature.Metric.Value}&deg;
+            {Math.round(props.cityWeatherToDisplay.Temperature.Metric.Value)}
+            &deg; c
           </Typography>
         </CardContent>
       </Card>

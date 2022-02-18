@@ -20,9 +20,8 @@ export default function WeatherDisplay(props) {
           maxHeight: 800,
           width: '100%',
           height: '100%',
-          border: 1,
           borderRadius: 4,
-          borderColor: '#92A9BD',
+          backgroundColor: 'rgba(248, 240, 223, 0.7)',
         }}
       >
         <Box

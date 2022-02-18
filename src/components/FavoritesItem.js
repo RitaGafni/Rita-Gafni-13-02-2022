@@ -4,15 +4,21 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../weatherRedux';
 
 export default function FavoritesItem(props) {
+  const dispatch = useDispatch();
+  const { updateSelectedCity } = bindActionCreators(actionCreators, dispatch);
+
+  const handleSelectFavorite = () => {
+    updateSelectedCity(props.item.key, props.item.cityName);
+  };
+
   return (
     <div>
-      <CardActionArea
-        component={Link}
-        to='/'
-        state={{ key: props.item.key, cityName: props.item.cityName }}
-      >
+      <CardActionArea onClick={handleSelectFavorite} component={Link} to='/'>
         <Card
           key={props.item.key}
           sx={{

@@ -16,3 +16,13 @@ export const deleteFromFavorites = (cityKey) => {
     });
   };
 };
+
+export const updateSelectedCity = (cityKey, cityName) => {
+  return (dispatch) => {
+    dispatch({
+      type: 'UPDATE_SELECTED_CITY',
+      cityKey: cityKey,
+      cityName: cityName,
+    });
+  };
+};

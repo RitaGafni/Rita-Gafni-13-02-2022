@@ -10,17 +10,13 @@ export default function FiveDayForecast(props) {
   const [currentCityFiveDayForecast, setCurrentCityFiveDayForecast] =
     useState();
 
-  console.log('key in 5 day', props.cityKey);
   useEffect(() => {
     const getFiveDayForecastInfo = async (key) => {
       const forecast = await getFiveDayForecast(key);
-      console.log('foreeeee', forecast);
       setCurrentCityFiveDayForecast(forecast);
     };
     getFiveDayForecastInfo(props.cityKey);
   }, [props.cityKey]);
-
-  // const temp = getFiveDayForecast();
 
   return (
     <div>
@@ -44,6 +40,7 @@ export default function FiveDayForecast(props) {
                 maxHeight: 140,
                 p: 1,
                 m: 1,
+                backgroundColor: '#c3dbd959',
               }}
             >
               <CardContent

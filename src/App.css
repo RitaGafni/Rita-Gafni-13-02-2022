@@ -1,4 +1,7 @@
 .App {
   text-align: center;
-  background-color: '#92A9BD' !important;
+  /* background-color: #92a9bd !important; */
+  background-image: url(https://eskipaper.com/images/background-3.jpg);
+  height: 100%;
+  width: 100%;
 }

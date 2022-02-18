@@ -5,10 +5,11 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import Box from '@mui/material/Box';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { actionCreators } from '../favoritesRedux';
+import { actionCreators } from '../weatherRedux';
 
 export default function HomeAddToFavorites(props) {
   const favorites = useSelector((state) => state.favorites);
+  const iconColor = '#8B5E83';
 
   const dispatch = useDispatch();
   const { addToFavorites, deleteFromFavorites } = bindActionCreators(
@@ -29,7 +30,6 @@ export default function HomeAddToFavorites(props) {
         }
       });
       setIsCityInFavorites(isThere);
-      console.log(favorites.favoritesList);
     };
     checkIfCityInFavorites(cityKey);
   }, [cityKey, favorites.favoritesList]);
@@ -49,7 +49,7 @@ export default function HomeAddToFavorites(props) {
       <Box sx={{ display: 'flex', alignItems: 'center', mr: 3 }}>
         {isCityInFavorites ? (
           <IconButton
-            color='secondary'
+            sx={{ color: iconColor }}
             aria-label='remove-from-favorites'
             onClick={removeFromFavoritesHandler}
           >
@@ -57,7 +57,7 @@ export default function HomeAddToFavorites(props) {
           </IconButton>
         ) : (
           <IconButton
-            color='secondary'
+            sx={{ color: iconColor }}
             aria-label='add-to-favorites'
             onClick={addToFavoritesHandler}
           >

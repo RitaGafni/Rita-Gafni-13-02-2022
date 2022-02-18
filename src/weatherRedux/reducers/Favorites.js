@@ -1,5 +1,5 @@
 const initState = {
-  favoritesList: [['61484', 'Tengchong']],
+  favoritesList: [],
 };
 
 const FavoritesReducer = (state = initState, action) => {
