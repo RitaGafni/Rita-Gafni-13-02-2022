@@ -5,15 +5,9 @@ import Toolbar from '@mui/material/Toolbar';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { actionCreators } from '../weatherRedux';
-import configData from '../config.json';
 
 export default function NavBar() {
   const [selectedPage, setSelectedPage] = useState('home');
-  const dispatch = useDispatch();
-  const { updateSelectedCity } = bindActionCreators(actionCreators, dispatch);
 
   const handlePageChange = (event, newChoise) => {
     if (newChoise !== null) {
