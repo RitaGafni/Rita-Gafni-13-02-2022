@@ -11,33 +11,36 @@ const themeLight = createTheme({
   palette: {
     type: 'light',
     background: {
-      default: '#9AD0EC',
+      paper: 'rgba(248, 240, 223)',
+      default: '#D7E9F7',
     },
-    primary: { main: '#7C99AC' },
+    primary: { main: '#79B4B7' },
   },
 });
 
 const themeDark = createTheme({
   palette: {
-    type: 'dark',
+    mode: 'dark',
     background: {
-      default: '#D885A3',
+      card: '#395B64',
     },
-    primary: { main: '#64C9CF' },
+    backgroundImage: {
+      papre: '#395B64',
+    },
   },
 });
 
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-  const appliedTheme = createTheme(theme ? themeLight : themeDark);
+  const appliedTheme = createTheme(isDarkTheme ? themeDark : themeLight);
 
   return (
     <div className='App'>
       <ThemeProvider theme={appliedTheme}>
         <CssBaseline>
           <Router>
-            <NavBar setTheme={(theme) => setTheme(theme)} />
+            <NavBar setIsDarkTheme={(mode) => setIsDarkTheme(mode)} />
             <Routes>
               <Route exact path='/' element={<Home />} />
               <Route path='/favorites' element={<Favorites />} />

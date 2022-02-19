@@ -45,7 +45,9 @@ export default function SearchBar(props) {
             `${cities.LocalizedName} (${cities.Country.LocalizedName} ${cities.AdministrativeArea.ID})`
           }
           options={cities ? cities : []}
-          sx={{ width: 300, backgroundColor: 'rgba(248, 240, 223, 0.7)' }}
+          sx={{
+            width: 300,
+          }}
           renderOption={(props, cities) => (
             <Box component='li' {...props} key={cities.Key}>
               {cities.LocalizedName} ({cities.Country.LocalizedName}{' '}

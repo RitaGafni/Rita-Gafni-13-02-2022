@@ -24,7 +24,7 @@ export default function Favorites() {
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
-        height: '100%',
+        height: '80%',
         width: '100%',
       }}
     >

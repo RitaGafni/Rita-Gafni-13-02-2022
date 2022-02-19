@@ -27,7 +27,6 @@ export default function FavoritesItem(props) {
             height: 220,
             m: 1,
             p: 1,
-            backgroundColor: '#F3F1F5',
           }}
         >
           <CardContent

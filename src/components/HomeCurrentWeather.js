@@ -17,6 +17,7 @@ export default function CurrentWeather(props) {
           width: '100%',
           boxShadow: 0,
           backgroundColor: 'transparent',
+          backgroundImage: 'none',
         }}
       >
         <CardMedia
