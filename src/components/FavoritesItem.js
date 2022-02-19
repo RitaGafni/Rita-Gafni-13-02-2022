@@ -54,7 +54,6 @@ export default function FavoritesItem(props) {
               height='80'
               alt='weather icon'
               src={props.item.iconURL}
-              objectFit='fit'
             />
           </CardContent>
         </Card>

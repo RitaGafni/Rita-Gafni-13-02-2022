@@ -41,7 +41,9 @@ export default function Favorites() {
       >
         <Grid sx={{ justifyContent: 'center' }} container spacing={3}>
           {favoritesData &&
-            favoritesData.map((item) => <FavoritesItem item={item} />)}
+            favoritesData.map((item) => (
+              <FavoritesItem item={item} key={item.key} />
+            ))}
         </Grid>
       </Box>
       {favoritesData && favoritesData.length === 0 && (

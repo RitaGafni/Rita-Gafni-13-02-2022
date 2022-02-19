@@ -23,7 +23,6 @@ export default function NavBar() {
 
   const handleBackToHome = () => {
     setSelectedPage('home');
-    updateSelectedCity(configData.DEFAULT_CITY_KEY, configData.DEFAULT_CITY);
   };
 
   return (
