@@ -20,7 +20,7 @@ export const getFavoritesData = async (favorites) => {
 
 const getWeatherInfo = async (key) => {
   const data = await axios(
-    `${configData.WEATHER_SERVER_URL}/currentconditions/v1/${key}?apikey=G0W5yfIHdCSAiqzjEyQ2t6avDqv0GTGN`
+    `${configData.WEATHER_SERVER_URL}/currentconditions/v1/${key}?apikey=${configData.API_KEY}`
   );
   return data.data[0];
 };

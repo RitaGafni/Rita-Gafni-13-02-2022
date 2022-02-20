@@ -1,5 +1,6 @@
 {
   "DEFAULT_CITY": "Tel Aviv",
   "DEFAULT_CITY_KEY": "215854",
-  "WEATHER_SERVER_URL": "https://dataservice.accuweather.com"
+  "WEATHER_SERVER_URL": "https://dataservice.accuweather.com",
+  "API_KEY": "G0W5yfIHdCSAiqzjEyQ2t6avDqv0GTGN"
 }

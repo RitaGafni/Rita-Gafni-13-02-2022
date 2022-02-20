@@ -21,7 +21,7 @@ export const getFiveDayForecast = async (cityKey) => {
 
 const getFiveDaysForecastFromAPI = async (key) => {
   const data = await axios(
-    `${configData.WEATHER_SERVER_URL}/forecasts/v1/daily/5day/${key}?apikey=G0W5yfIHdCSAiqzjEyQ2t6avDqv0GTGN&metric=true`
+    `${configData.WEATHER_SERVER_URL}/forecasts/v1/daily/5day/${key}?apikey=${configData.API_KEY}&metric=true`
   );
   return data.data;
 };
